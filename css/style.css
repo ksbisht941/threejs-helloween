@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Creepster', cursive;
+}
+
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+
+.cursor {
+    position: fixed;
+    top: -5px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.cursor-border {
+    --size: 50px;
+    position: fixed;
+    top: calc(var(--size) / -2);
+    left: calc(var(--size) / -2);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px white;
+    pointer-events: none;
+    transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
+        height 0.15s ease-out, background-color 0.15s ease-out;
+    z-index: 9;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background: #000;
+    position: fixed;
+    z-index: 10;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay h1 {
+    color: #fff;
+    font-size: 120px;
+    line-height: 140%;
+    letter-spacing: 7px;
+    position: relative;
+    overflow: hidden;
+    height: 168px;
+    width: 530px;
+}
+
+.overlay h1 span {
+    position: absolute;
+}
